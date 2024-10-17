@@ -6,12 +6,12 @@ $third-color: #99E2D0;
 // bords link
 $radius-link: 30px;
 
-
 // Cards
 .cards {
     
     height: 70px;
     background: #f2f2f2;
+    align-content: center;
     width: 335px;
     border-radius: 20px;
     filter: drop-shadow(1px 1px 6px rgba(0, 0, 0, 0.2));
@@ -21,6 +21,7 @@ $radius-link: 30px;
     font-family: 'roboto', sans-serif;
     box-sizing: border-box;
     text-decoration: none;
+    color: black;
 }
 
 body {
@@ -83,12 +84,15 @@ header {
 
 
     & h2 {
-        margin: 50px 0 0 20px;
+        margin: 50px 0 30px 20px;
     }
 
     .howto__cards {
         display: flex;
         flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 25px;
     }
 }
 
