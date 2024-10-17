@@ -2,6 +2,10 @@
   background: #f2f2f2;
 }
 
+.marginbas {
+  margin-bottom: 0;
+}
+
 .white {
   color: white;
 }
@@ -17,6 +21,10 @@
   width: 335px;
   border-radius: 20px;
   filter: drop-shadow(1px 1px 6px rgba(0, 0, 0, 0.2));
+}
+
+.cards-radius {
+  border-radius: 15px;
 }
 
 * {
@@ -48,6 +56,23 @@ header input {
   border: none;
 }
 
+.header__form {
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  gap: 17px;
+  flex-shrink: 0;
+  background: #eaeaea;
+}
+.header__form input {
+  background: #eaeaea;
+  width: 200px;
+  font-family: "roboto", sans-serif;
+  font-size: medium;
+  color: #353535;
+}
+
 .about {
   display: flex;
   flex-direction: column;
@@ -70,7 +95,7 @@ header input {
   margin-bottom: 0;
 }
 .about p {
-  margin-bottom: 30px;
+  margin: 20px 20px 30px 20px;
 }
 
 .howto h2 {
@@ -96,10 +121,23 @@ header input {
   height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 15px 15px 0 0;
+}
+.restaurant figure {
+  background: white;
 }
 
 .footer-container {
   background: #353535;
+  padding: 22px 25px 22px 25px;
+}
+
+.footer-logo {
+  fill: white;
+}
+
+.footer-links {
+  margin-bottom: 0;
 }
 
 @media (min-width: 768px) {
