@@ -1,3 +1,8 @@
+/**** logo ****/
+/**** gradient ****/
+/**** cercle ****/
+/**** Shadow ****/
+/**** gradient ****/
 .content-background {
   background: #f2f2f2;
 }
@@ -134,10 +139,179 @@ header input {
 
 .footer-logo {
   fill: white;
+  color: white;
 }
 
-.footer-links {
-  margin-bottom: 0;
+.footer__links {
+  padding: 0;
+}
+.footer__links li {
+  display: flex;
+  padding-bottom: 7px;
+}
+.footer__links--icon {
+  padding-right: 5%;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 20px;
+  font-size: 15px;
+}
+
+.header__back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 5%;
+  width: 20px;
+  height: 20px;
+  top: 2.5%;
+  font-size: 30px;
+  color: #353535;
+}
+
+.button__like {
+  width: 28px;
+  z-index: 0;
+  position: relative;
+  font-family: "Font Awesome 5 Free";
+  font-size: 25px;
+  padding: 0;
+  border: transparent 0px solid;
+  background-color: transparent;
+  -webkit-text-stroke: 1px white;
+  cursor: pointer;
+}
+
+.hero__btngradient {
+  width: 218px;
+  height: 50px;
+  color: #ffffff;
+  font-size: 16px;
+  background: linear-gradient(357deg, #9356DC, #FF79DA);
+  border-radius: 25px;
+  border: none;
+  font-weight: 500;
+  box-shadow: 0 4px 10px 0 #D5D5D5;
+  cursor: pointer;
+  margin: 27px 75px 57px 82px;
+  transition: opacity 300ms ease-in-out;
+}
+.hero__btngradient:hover {
+  opacity: 0.88;
+  box-shadow: 0 4px 10px 0 #afafaf;
+}
+
+.entete__restaurant--img {
+  position: relative;
+  width: 100%;
+  height: 250px;
+}
+
+.menu {
+  position: relative;
+  background-color: darken #ffffff, 6%;
+  border-radius: 25px 25px 0px 0px;
+  padding: 2% 5% 5% 5%;
+  z-index: 0;
+}
+.menu__heading {
+  display: flex;
+  align-items: center;
+  margin: auto;
+}
+.menu__heading h2 {
+  width: 87%;
+  font-weight: 400;
+  font-size: 28px;
+  font-family: "Shrikhand", cursive;
+}
+.menu__container .menu__orderbtn {
+  display: flex;
+  justify-content: center;
+}
+
+.menu-type {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.menu-type__heading {
+  position: relative;
+  margin: 4% 0% 2% 0%;
+  padding: 10px 0px;
+  font-size: 18px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.menu-type__heading::after {
+  display: block;
+  position: absolute;
+  bottom: 2px;
+  content: "";
+  width: 40px;
+  height: 4px;
+  background-color: #99E2D0;
+}
+
+.menu-cards {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 10px 0px;
+  padding: 0;
+  background-color: white;
+  box-shadow: 0 4px 10px 0 #D5D5D5;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.menu-cards__info {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  width: 100%;
+  margin: 2%;
+  gap: 2%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu-cards__description {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  padding: 5px;
+}
+.menu-cards__description h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu-cards__description p {
+  margin: 0;
+  font-weight: 300;
+  font-size: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu-cards__checkout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  width: 20%;
+  margin-right: -20%;
+  border-radius: 0px 15px 15px 0px;
+  background-color: #99E2D0;
+  transition: margin-right 800ms cubic-bezier(0.63, 1.23, 0.96, 0.92);
 }
 
 @media (min-width: 768px) {
