@@ -7,6 +7,12 @@ $black: #353535;
 $grey: #EAEAEA;
 $shadow: #D5D5D5;
 
+// couleurs liens visités
+
+a:visited {
+    color: #000; /* Couleur des liens visités */
+}
+
 // fonts
 $font-weight: (
     light: 300,
@@ -196,52 +202,142 @@ header {
 
 // restaurant section
 
-.restaurant {
-    &__img {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-        border-radius: 15px 15px 0 0;
+.restaurant__cards {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 251px;
+    margin: auto ;
+    margin-bottom: 18px;
+    border-radius: 15px;
+    background-color: $white;
+    @include object-shadow;
+    // @include desktop__responsive;
+    
+
+    // @include table__responsive {
+    //     width: 48%;
+    //     margin: 0;
+    //     margin-bottom: 4%;
+    // }
+
+    &:hover {
+        @include object-shadow(darken($shadow, 10%))
     }
 
-    & figure {
-        background: white;
+    &--img {
+        position: relative;
+        overflow: hidden;
+        height: 175px;
+        border-radius: 15px 15px 0px 0px;
+
+        & img {
+            width: 100%;
+            height: 175px;
+            object-fit: cover;
+        }
+
+        &--markerinfo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            right: 15px;
+            top: 12px;
+            width: 80px;
+            height: 30px;
+            border-radius: 2px;
+            background-color: $third-color;
+            color: darken($third-color, 40%);
+            font-weight: map-get($font-weight, medium);
+        }
+    }
+
+    &--info {
+        display: flex;
+        align-items: flex-start;
+        height: auto;
+        min-height: 75px;
+        padding: 15px;
+
+        &--text {
+            width: 90%;
+        }
+
+        & h4, p {
+            margin: 0;
+        }
+        
+        & h4 {
+            width: 267px;
+            height: 20px;
+            margin-bottom: 5px;
+            font-size: 18px;
+        }
+
+        & p {
+            height: 24px;
+            font-weight: 300;
+            font-size: 17px;
+        }
+    }
+
+    &--like {
+        position: absolute;
+        top: 76%;
+        right: 7%;
+        font-size: 25px;
     }
 }
 
-.footer-container {
+// .restaurant {
+
+//     & img {
+//         width: 100%;
+//         height: 200px;
+//         object-fit: cover;
+//         border-radius: 15px 15px 0 0;
+//         // @include object-shadow(darken($shadow, 15%));
+//     }
+
+//     & figure {
+//         background: white;
+//         @include object-shadow(darken($shadow, 1px));
+
+//     }
+// }
+
+.footer__container {
     background: #353535;
     padding: 22px 25px 22px 25px;
-}
+    margin-top: 100px;
 
-.footer-logo {
-    fill: white;
-    color: white;
-}
+    .footer__container--links {
 
-.footer__links {
-    
-    padding: 0;
+        padding: 0;
 
-    & li {
-        // padding: 10px;
-        display: flex;
-        padding-bottom: 7px;
+        & li {
+            display: flex;
+            padding-bottom: 7px;
+        }
     }
 
     &--icon {
-            // display: flex;
-            padding-right: 5%;
-            justify-content: center;
-            align-items: center;
-            width: 25px;
-            height: 20px;
-            font-size: 15px;
+        padding-right: 5%;
+        justify-content: center;
+        align-items: center;
+        width: 25px;
+        height: 20px;
+        font-size: 15px;
     }
-
 }
 
-
+.footer__container--logo {
+    margin: 0 0 16px 0;
+        @include cursive__logo;
+        font-size: 22px;
+        color: $white;
+}
 
 // Menu page
 
@@ -259,6 +355,14 @@ header {
         color: $black;
 }
 
+/* Heart fill */
+@keyframes heart-fill {   
+    100% {
+        opacity: (1);
+        transform: scale(1);
+    }
+}
+
 // **** bouton like **** //
 
 .button__like{
@@ -272,6 +376,32 @@ header {
     background-color: transparent;
     -webkit-text-stroke: 1px white;
     cursor: pointer;
+
+    &:hover {
+        &::after {
+            z-index: 1;
+            animation: heart-fill forwards;
+        }
+    }
+
+    &::after {
+        z-index: -1;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        font-size: 25px;
+        content: "\f004";
+        color: transparent;
+        @include gradient(45deg);
+        background-clip: text;
+        transform-origin: bottom;
+        -webkit-text-stroke: 1px;
+    }
 }
 
 .hero__btngradient{
@@ -366,6 +496,10 @@ header {
     overflow: hidden;
     cursor: pointer;
 
+    &:hover>&__checkout {
+        margin-right: 0px;
+    }
+
     &__info {
         display: flex;
         flex: 1;
@@ -414,7 +548,18 @@ header {
         margin-right: -20%;
         border-radius: 0px 15px 15px 0px;
         background-color: $third-color;
-        transition: margin-right 800ms cubic-bezier(.63, 1.23, .96, .92);
+        transition: margin-right 400ms;
+
+        &::after {
+            display: inline-block;
+            margin: auto;
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            font-size: 25px;
+            content: "\f058";
+            color: $white;
+            transition: transform 400ms;
+        }
     }
 }
 
@@ -431,9 +576,5 @@ header {
             justify-content: center;
         }
     }
-
-}
-
-@media (min-width: 1024px) {
 
 }
