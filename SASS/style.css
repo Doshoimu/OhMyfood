@@ -1,10 +1,4 @@
-@charset "UTF-8";
-a:visited {
-  color: #000; /* Couleur des liens visités */
-}
-
 /**** logo ****/
-/**** gradient ****/
 /**** cercle ****/
 /**** Shadow ****/
 /**** gradient ****/
@@ -101,8 +95,11 @@ header input {
   text-decoration: none;
   border-radius: 30px;
 }
+.about__link a {
+  color: #ffffff;
+}
 .about h1 {
-  margin-bottom: 0;
+  margin: 35px 10px 0px 10px;
 }
 .about p {
   margin: 20px 20px 30px 20px;
@@ -131,8 +128,7 @@ header input {
   flex-direction: column;
   position: relative;
   height: 251px;
-  margin: auto;
-  margin-bottom: 18px;
+  margin: 10px;
   border-radius: 15px;
   background-color: #ffffff;
   box-shadow: 0 4px 10px 0 #D5D5D5;
@@ -152,7 +148,7 @@ header input {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.restaurant__cards--img--markerinfo {
+.restaurant__cards--img--new {
   display: flex;
   align-items: center;
   justify-content: center;

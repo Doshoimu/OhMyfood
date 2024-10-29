@@ -7,12 +7,6 @@ $black: #353535;
 $grey: #EAEAEA;
 $shadow: #D5D5D5;
 
-// couleurs liens visités
-
-a:visited {
-    color: #000; /* Couleur des liens visités */
-}
-
 // fonts
 $font-weight: (
     light: 300,
@@ -33,11 +27,6 @@ $degree: 357deg;
     font-weight: map-get($font-weight, regular);
     font-size: 28px;
     font-family: "Shrikhand", cursive;
-}
-
-/**** gradient ****/
-@mixin gradient ($orientation: $degree) {
-    background:linear-gradient( $degree, $main-color, $second-color);
 }
 
 /**** cercle ****/
@@ -151,7 +140,6 @@ header {
     display: flex;
     flex-direction: column;
     text-align: center;
-    // background: #F2F2F2;
     height: 300px;
     box-shadow: 4px -4px 8px rgba(0, 0, 0, 0.2);
 
@@ -165,11 +153,14 @@ header {
         color: white;
         text-decoration: none;
         border-radius: $radius-link;
-        // box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+
+        & a {
+            color: $white;
+        }
     }
 
     & h1 {
-        margin-bottom: 0;
+        margin: 35px 10px 0px 10px
     }
 
     & p {
@@ -207,19 +198,10 @@ header {
     flex-direction: column;
     position: relative;
     height: 251px;
-    margin: auto ;
-    margin-bottom: 18px;
+    margin: 10px;
     border-radius: 15px;
     background-color: $white;
     @include object-shadow;
-    // @include desktop__responsive;
-    
-
-    // @include table__responsive {
-    //     width: 48%;
-    //     margin: 0;
-    //     margin-bottom: 4%;
-    // }
 
     &:hover {
         @include object-shadow(darken($shadow, 10%))
@@ -237,7 +219,7 @@ header {
             object-fit: cover;
         }
 
-        &--markerinfo {
+        &--new {
             display: flex;
             align-items: center;
             justify-content: center;
