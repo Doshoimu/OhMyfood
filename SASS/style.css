@@ -49,7 +49,7 @@ header {
   align-items: center;
   justify-content: center;
 }
-header .header__logo {
+header__logo {
   padding: 30px 0 15px 0;
 }
 header .header {
@@ -294,7 +294,7 @@ header input {
   transition: opacity 300ms ease-in-out;
 }
 .hero__btngradient:hover {
-  opacity: 0.88;
+  opacity: 0.85;
   box-shadow: 0 4px 10px 0 #afafaf;
 }
 
@@ -322,7 +322,8 @@ header input {
   font-size: 28px;
   font-family: "Shrikhand", cursive;
 }
-.menu__container .menu__orderbtn {
+
+.menu__orderbtn {
   display: flex;
   justify-content: center;
 }
@@ -365,6 +366,9 @@ header input {
 }
 .menu-cards:hover > .menu-cards__checkout {
   margin-right: 0px;
+}
+.menu-cards:hover > .menu-cards__checkout::after {
+  transform: rotate(720deg);
 }
 .menu-cards__info {
   display: flex;

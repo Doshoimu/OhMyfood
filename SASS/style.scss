@@ -39,7 +39,7 @@ $degree: 357deg;
 }
 
 /**** gradient ****/
-@mixin gradient ($oriantation: $degree) {
+@mixin gradient ($orientation: $degree) {
     background:linear-gradient( $degree, $main-color, $second-color);
 }
 
@@ -100,7 +100,7 @@ header {
     align-items: center;
     justify-content: center;
 
-    .header__logo {
+    &__logo {
         padding: 30px 0 15px 0;
     }
 
@@ -172,6 +172,8 @@ header {
     & h2 {
         margin: 50px 0 30px 20px;
     }
+
+
 
     .howto__cards {
         display: flex;
@@ -382,7 +384,7 @@ header {
     transition: opacity 300ms ease-in-out;
 
     &:hover {
-        opacity: 0.88;
+        opacity: 0.85;
         @include object-shadow(darken($shadow, 15%));
     }
 }
@@ -410,14 +412,11 @@ header {
             @include cursive__logo;
         }
     }
+}
 
-    &__container 
-
-    &__orderbtn {
-        display: flex;
-        justify-content: center;
-    }
-
+.menu__orderbtn {
+    display: flex;
+    justify-content: center;
 }
 
 .menu-type {
@@ -460,6 +459,10 @@ header {
 
     &:hover>&__checkout {
         margin-right: 0px;
+
+        &::after {
+            transform: rotate(720deg);
+        }
     }
 
     &__info {
