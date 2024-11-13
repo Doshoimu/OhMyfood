@@ -43,6 +43,9 @@ $degree: 357deg;
     background:linear-gradient( $degree, $main-color, $second-color);
 }
 
+/**** Gradient ****/
+$gradient-loader : linear-gradient(to top, lighten($main-color, 10%), transparent,$second-color,);
+
 // bords link
 $radius-link: 30px;
 
@@ -320,6 +323,31 @@ header {
         color: $black;
 }
 
+/* Animation loader */
+
+@keyframes loading-appear {
+    50% {
+        opacity: 0.95;
+    }
+    99% {
+        z-index: 1;
+    }
+    100% {
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+@keyframes rotate-gradient {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(1440deg);
+    }
+}
+
 /* Heart fill */
 @keyframes heart-fill {   
     100% {
@@ -529,7 +557,49 @@ header {
 }
 
     //  Loader //
+    
+.loader-container {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: $white;
+    opacity: 0.90;
+    animation: loading-appear 2s both ease-in-out;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.loader-spinner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 290px;
+    min-width: 290px;
+    height: 290px;
+    @include circle;
+    background: $gradient-loader;
+    box-shadow: 0px 1px 12px rgba(0, 0, 0, 0.30);
+    z-index: 0;
+    animation: rotate-gradient 3s;
+
+    &::after {
+        z-index: 0;
+        position: absolute;
+        content: "";
+        width: 85%;
+        height: 85%;
+        background-color: $white;
+        @include circle;
+        animation: pulse 1s ease-in-out infinite;
+    }
+}    
 
 @media (min-width: 768px) {
 
