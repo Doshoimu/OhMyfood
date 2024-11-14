@@ -408,6 +408,9 @@ header input {
   overflow: hidden;
   cursor: pointer;
 }
+.menu-cards .menu-cards__checkout {
+  transition: margin-right 600ms ease, transform 600ms ease;
+}
 .menu-cards:hover > .menu-cards__checkout {
   margin-right: 0px;
 }

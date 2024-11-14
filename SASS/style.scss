@@ -512,6 +512,10 @@ header {
     overflow: hidden;
     cursor: pointer;
 
+    .menu-cards__checkout {
+        transition: margin-right 600ms ease, transform 600ms ease;
+    }
+
     &:hover>&__checkout {
         margin-right: 0px;
 
