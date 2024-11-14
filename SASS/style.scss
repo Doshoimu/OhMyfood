@@ -103,8 +103,8 @@ header {
     align-items: center;
     justify-content: center;
 
-    &__logo {
-        padding: 30px 0 15px 0;
+    .header__logo {
+        padding: 20px 0 15px 0;
     }
 
     .header {
@@ -401,7 +401,7 @@ header {
     &:hover {
         &::after {
             z-index: 1;
-            animation: heart-fill 500ms forwards ease-out;
+            animation: heart-fill 500ms forwards ease-in;
         }
     }
 
@@ -453,7 +453,6 @@ header {
 
 .menu {
     position: relative;
-    background-color: darken ($white, 6%);
     border-radius: 25px 25px 0px 0px;
     padding: 2% 5% 5% 5%;
     z-index: 0;

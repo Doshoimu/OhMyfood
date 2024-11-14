@@ -50,8 +50,8 @@ header {
   align-items: center;
   justify-content: center;
 }
-header__logo {
-  padding: 30px 0 15px 0;
+header .header__logo {
+  padding: 20px 0 15px 0;
 }
 header .header {
   width: 100%;
@@ -302,7 +302,7 @@ header input {
 }
 .button__like:hover::after {
   z-index: 1;
-  animation: heart-fill 500ms forwards ease-out;
+  animation: heart-fill 500ms forwards ease-in;
 }
 .button__like::after {
   z-index: -1;
@@ -351,7 +351,6 @@ header input {
 
 .menu {
   position: relative;
-  background-color: darken #ffffff, 6%;
   border-radius: 25px 25px 0px 0px;
   padding: 2% 5% 5% 5%;
   z-index: 0;
