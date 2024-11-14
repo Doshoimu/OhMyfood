@@ -412,7 +412,7 @@ header input {
   margin-right: 0px;
 }
 .menu-cards:hover > .menu-cards__checkout::after {
-  transform: rotate(720deg);
+  transform: rotate(360deg);
 }
 .menu-cards__info {
   display: flex;
