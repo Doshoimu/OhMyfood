@@ -1,3 +1,5 @@
+/**** Variable ****/
+/**** responsive ****/
 /**** logo ****/
 /**** cercle ****/
 /**** Shadow ****/
@@ -40,7 +42,7 @@
 }
 
 body {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
 }
 
@@ -86,14 +88,16 @@ header input {
   display: flex;
   flex-direction: column;
   text-align: center;
-  height: 300px;
+  align-items: center;
   box-shadow: 4px -4px 8px rgba(0, 0, 0, 0.2);
 }
 .about__link {
   height: 50px;
   width: 228px;
-  margin: 0 auto;
-  display: inline-block;
+  margin: 0 0 25px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 15px;
   background: linear-gradient(to bottom, #FF79DA, #9356DC);
   color: white;
@@ -110,8 +114,17 @@ header input {
   margin: 20px 20px 30px 20px;
 }
 
+.howto {
+  margin: 0 60px 0 60px;
+}
 .howto h2 {
   margin: 50px 0 30px 20px;
+}
+@media all and (min-width: 1024px) {
+  .howto h2 {
+    display: flex;
+    justify-content: flex-start;
+  }
 }
 .howto .howto__cards {
   display: flex;
@@ -119,6 +132,12 @@ header input {
   align-items: center;
   text-align: center;
   gap: 25px;
+}
+@media all and (min-width: 1024px) {
+  .howto .howto__cards {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .circle {
@@ -196,6 +215,15 @@ header input {
   top: 76%;
   right: 7%;
   font-size: 25px;
+}
+
+@media all and (min-width: 768px) {
+  .restaurant__container {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
 .footer__container {

@@ -30,6 +30,20 @@ $degree: 357deg;
 
 // mixin
 
+/**** responsive ****/
+
+@mixin tablet__responsive {
+    @media all and (min-width: map-get($breakpoint, tablet)) {
+        @content;
+    }
+}
+
+@mixin desktop__responsive {
+    @media all and (min-width: map-get($breakpoint, desktop)) {
+        @content;
+    }
+}
+
 /**** logo ****/
 
 @mixin cursive__logo {
@@ -101,7 +115,7 @@ $radius-link: 30px;
 }
 
 body {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
 }
 
@@ -154,14 +168,16 @@ header {
     display: flex;
     flex-direction: column;
     text-align: center;
-    height: 300px;
+    align-items: center;
     box-shadow: 4px -4px 8px rgba(0, 0, 0, 0.2);
 
     &__link {
         height: 50px;
         width: 228px;
-        margin: 0 auto;
-        display: inline-block;
+        margin: 0 0 25px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         padding: 15px;
         background: linear-gradient(to bottom, $second-color, $main-color);
         color: white;
@@ -184,9 +200,15 @@ header {
 
 .howto {
 
+    margin: 0 60px 0 60px;
 
     & h2 {
         margin: 50px 0 30px 20px;
+
+        @include desktop__responsive {
+            display: flex;
+            justify-content: flex-start;
+        }
     }
 
 
@@ -197,6 +219,11 @@ header {
         align-items: center;
         text-align: center;
         gap: 25px;
+
+        @include desktop__responsive {
+            flex-direction: row;
+            justify-content: space-between;
+        }
     }
 }
 
@@ -285,6 +312,17 @@ header {
         top: 76%;
         right: 7%;
         font-size: 25px;
+    }
+}
+
+.restaurant__container {
+    @include desktop__responsive;
+
+    @include tablet__responsive {
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
 }
 
