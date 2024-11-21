@@ -377,6 +377,30 @@ header input {
     transform: scale(1);
   }
 }
+@keyframes fade-in {
+  0% {
+    transform: translateY(80px);
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  }
+}
+.fade-in {
+  transform-origin: top;
+  animation: fade-in 2s forwards;
+}
+.fade-in--2 {
+  animation: fade-in 2s 500ms both;
+}
+.fade-in--3 {
+  animation: fade-in 2s 1000ms both;
+}
+
 .button__like {
   width: 28px;
   z-index: 0;
@@ -424,7 +448,6 @@ header input {
   font-weight: 500;
   box-shadow: 0 4px 10px 0 #D5D5D5;
   cursor: pointer;
-  margin: 27px 75px 57px 82px;
   transition: opacity 300ms ease-in-out;
 }
 .hero__btngradient:hover {
@@ -436,13 +459,23 @@ header input {
   position: relative;
   width: 100%;
   height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
 }
 
 .menu {
   position: relative;
+  background-color: #EAEAEA;
   border-radius: 25px 25px 0px 0px;
-  padding: 2% 5% 5% 5%;
+  padding: 2% 5% 50px 5%;
   z-index: 0;
+}
+@media all and (min-width: 1024px) {
+  .menu {
+    max-width: 1024px;
+    margin: auto;
+  }
 }
 .menu__heading {
   display: flex;
@@ -459,14 +492,15 @@ header input {
 .menu__orderbtn {
   display: flex;
   justify-content: center;
+  padding: 50px 0 0 0;
 }
 
-.menu-type {
+.menu__type {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.menu-type__heading {
+.menu__type__heading {
   position: relative;
   margin: 4% 0% 2% 0%;
   padding: 10px 0px;
@@ -474,7 +508,7 @@ header input {
   font-weight: 300;
   text-transform: uppercase;
 }
-.menu-type__heading::after {
+.menu__type__heading::after {
   display: block;
   position: absolute;
   bottom: 2px;

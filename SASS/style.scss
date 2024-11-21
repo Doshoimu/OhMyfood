@@ -514,6 +514,37 @@ background: #f2f2f2;
     }
 }
 
+// **** Apparition plats **** //
+
+@keyframes fade-in {
+    0% {
+        transform: translateY(80px);
+        opacity: 0;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(0);
+        animation-timing-function: cubic-bezier(.17, .67, .83, .67);
+    }
+}
+
+.fade-in {
+    transform-origin: top;
+    animation: fade-in 2s forwards;
+
+    &--2 {
+        animation: fade-in 2s 500ms both;
+    }
+
+    &--3 {
+        animation: fade-in 2s 1000ms both;
+    }
+}
+
 // **** bouton like **** //
 
 .button__like{
@@ -566,7 +597,7 @@ background: #f2f2f2;
     font-weight: map-get($font-weight, medium );
     @include object-shadow;
     cursor: pointer;
-    margin: 27px 75px 57px 82px;
+    // margin: 27px 75px 57px 82px;
     transition: opacity 300ms ease-in-out;
 
     &:hover {
@@ -579,13 +610,22 @@ background: #f2f2f2;
     position: relative;
     width: 100%;
     height: 250px;
+    object-fit: cover;
+    display: block;
 }
 
 .menu {
     position: relative;
+    background-color: $grey;
     border-radius: 25px 25px 0px 0px;
-    padding: 2% 5% 5% 5%;
+    // animation: plate-appear 750ms cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    padding: 2% 5% 50px 5%;
     z-index: 0;
+
+    @include desktop__responsive {
+        max-width: 1024px;
+        margin: auto;
+    }
 
     &__heading {
         display: flex;
@@ -602,9 +642,10 @@ background: #f2f2f2;
 .menu__orderbtn {
     display: flex;
     justify-content: center;
+    padding: 50px 0 0 0;
 }
 
-.menu-type {
+.menu__type {
     display: flex;
     flex-direction: column;
     justify-content: center;
