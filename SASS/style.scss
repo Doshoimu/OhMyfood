@@ -1,3 +1,12 @@
+/**** Variable ****/
+
+// Responsive
+
+$breakpoint: (
+    tablet: 768px,
+    desktop: 1024px,
+);
+
 // couleurs du site
 $main-color: #9356DC;
 $second-color: #FF79DA;
@@ -352,6 +361,30 @@ header {
     }
 }
 
+/* Menu appear */
+
+@keyframes menu-appear {
+    10% {
+        opacity: 0.1;
+    }
+
+    25% {
+        opacity: 0.3;
+    }
+
+    50% {
+        opacity: 0.6;
+    }
+
+    75% {
+        opacity: 0.8;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 /* Heart fill */
 @keyframes heart-fill {   
     0% {
@@ -520,7 +553,7 @@ header {
         margin-right: 0px;
 
         &::after {
-            transform: rotate(360deg);
+            transform: rotate(1080deg);
         }
     }
 
