@@ -169,6 +169,7 @@ header {
     flex-direction: column;
     text-align: center;
     align-items: center;
+    // padding-bottom: 50px;
     box-shadow: 4px -4px 8px rgba(0, 0, 0, 0.2);
 
     &__link {
@@ -200,7 +201,7 @@ header {
 
 .howto {
 
-    margin: 0 60px 0 60px;
+    margin: 0 60px 50px 60px;
 
     & h2 {
         margin: 50px 0 30px 20px;
@@ -236,6 +237,25 @@ header {
 
 // restaurant section
 
+.restaurant {
+
+display: flex;
+flex-direction: column;
+margin: auto;
+padding: 30px 0 80px 0;
+background: #f2f2f2;
+
+    @include desktop__responsive {
+        // margin: 0 60px 0 60px;
+    }
+
+    & h2 {
+        padding: 20px 0 20px 0;
+        margin: 0 auto;
+        width: 90%;
+    }
+}
+
 .restaurant__cards {
     display: flex;
     flex-direction: column;
@@ -245,6 +265,13 @@ header {
     border-radius: 15px;
     background-color: $white;
     @include object-shadow;
+    @include desktop__responsive;
+
+    @include tablet__responsive {
+        width: 48%;
+        margin: 0;
+        margin-bottom: 4%;
+    }
 
     &:hover {
         @include object-shadow(darken($shadow, 10%))
@@ -316,10 +343,13 @@ header {
 }
 
 .restaurant__container {
+
+    width: 90%;
+    margin: auto;
+
     @include desktop__responsive;
 
     @include tablet__responsive {
-        margin: 0 auto;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -329,9 +359,26 @@ header {
 .footer__container {
     background: #353535;
     padding: 22px 25px 22px 25px;
-    margin-top: 100px;
+    // margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    @include desktop__responsive;
+
+    @include tablet__responsive {
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: flex-start;
+    }
 
     .footer__container--links {
+
+        @include desktop__responsive;
+
+        @include tablet__responsive {
+            display: flex;
+            flex-direction: row;
+            gap: 15px;
+        }
 
         padding: 0;
 
@@ -356,6 +403,18 @@ header {
         @include cursive__logo;
         font-size: 22px;
         color: $white;
+
+        @include desktop__responsive;
+        @include tablet__responsive {
+            margin-left: 50px;
+        }
+}
+
+.footer__nav {
+    @include desktop__responsive;
+    @include tablet__responsive {
+        // width: 190px;
+    }
 }
 
 // Menu page
