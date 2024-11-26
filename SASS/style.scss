@@ -101,6 +101,20 @@ $radius-link: 30px;
     width: 335px;
     border-radius: 20px;
     filter: drop-shadow(1px 1px 6px rgba(0, 0, 0, 0.2));
+
+    &__content {
+        display: flex;
+        gap: 50px;
+        margin: 0 auto;
+
+        & a {
+            padding: 4px;
+        }
+    }
+}
+
+.fa-store {
+    color: $main-color;
 }
 
 .cards-radius {
@@ -204,7 +218,7 @@ header {
     margin: 0 60px 50px 60px;
 
     & h2 {
-        margin: 50px 0 30px 20px;
+        margin: 50px 0 30px 105px;
 
         @include desktop__responsive {
             display: flex;
@@ -223,7 +237,7 @@ header {
 
         @include desktop__responsive {
             flex-direction: row;
-            justify-content: space-between;
+            justify-content: space-evenly;
         }
     }
 }
@@ -233,6 +247,10 @@ header {
     height: 24px;
     border-radius: 50%;
     background: $main-color;
+
+    & h3 {
+        margin: 0 auto;
+    }
 }
 
 // restaurant section
@@ -252,7 +270,7 @@ background: #f2f2f2;
     & h2 {
         padding: 20px 0 20px 0;
         margin: 0 auto;
-        width: 90%;
+        width: 80%;
     }
 }
 
@@ -344,7 +362,7 @@ background: #f2f2f2;
 
 .restaurant__container {
 
-    width: 90%;
+    width: 80%;
     margin: auto;
 
     @include desktop__responsive;
@@ -458,30 +476,6 @@ background: #f2f2f2;
     }
 }
 
-/* Menu appear */
-
-@keyframes menu-appear {
-    10% {
-        opacity: 0.1;
-    }
-
-    25% {
-        opacity: 0.3;
-    }
-
-    50% {
-        opacity: 0.6;
-    }
-
-    75% {
-        opacity: 0.8;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
 /* Heart fill */
 @keyframes heart-fill {   
     0% {
@@ -518,7 +512,7 @@ background: #f2f2f2;
 
 @keyframes fade-in {
     0% {
-        transform: translateY(80px);
+        transform: translateY(120px);
         opacity: 0;
     }
 
@@ -528,7 +522,7 @@ background: #f2f2f2;
 
     100% {
         transform: translateY(0);
-        animation-timing-function: cubic-bezier(.17, .67, .83, .67);
+        animation-timing-function: cubic-bezier(.17, .10, .50, .67);
     }
 }
 

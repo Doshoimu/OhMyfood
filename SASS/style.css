@@ -29,6 +29,18 @@
   border-radius: 20px;
   filter: drop-shadow(1px 1px 6px rgba(0, 0, 0, 0.2));
 }
+.cards__content {
+  display: flex;
+  gap: 50px;
+  margin: 0 auto;
+}
+.cards__content a {
+  padding: 4px;
+}
+
+.fa-store {
+  color: #9356DC;
+}
 
 .cards-radius {
   border-radius: 15px;
@@ -118,7 +130,7 @@ header input {
   margin: 0 60px 50px 60px;
 }
 .howto h2 {
-  margin: 50px 0 30px 20px;
+  margin: 50px 0 30px 105px;
 }
 @media all and (min-width: 1024px) {
   .howto h2 {
@@ -136,7 +148,7 @@ header input {
 @media all and (min-width: 1024px) {
   .howto .howto__cards {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
 }
 
@@ -145,6 +157,9 @@ header input {
   height: 24px;
   border-radius: 50%;
   background: #9356DC;
+}
+.circle h3 {
+  margin: 0 auto;
 }
 
 .restaurant {
@@ -157,7 +172,7 @@ header input {
 .restaurant h2 {
   padding: 20px 0 20px 0;
   margin: 0 auto;
-  width: 90%;
+  width: 80%;
 }
 
 .restaurant__cards {
@@ -238,7 +253,7 @@ header input {
 }
 
 .restaurant__container {
-  width: 90%;
+  width: 80%;
   margin: auto;
 }
 @media all and (min-width: 768px) {
@@ -333,24 +348,6 @@ header input {
     transform: rotate(1440deg);
   }
 }
-/* Menu appear */
-@keyframes menu-appear {
-  10% {
-    opacity: 0.1;
-  }
-  25% {
-    opacity: 0.3;
-  }
-  50% {
-    opacity: 0.6;
-  }
-  75% {
-    opacity: 0.8;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 /* Heart fill */
 @keyframes heart-fill {
   0% {
@@ -379,7 +376,7 @@ header input {
 }
 @keyframes fade-in {
   0% {
-    transform: translateY(80px);
+    transform: translateY(120px);
     opacity: 0;
   }
   75% {
@@ -387,7 +384,7 @@ header input {
   }
   100% {
     transform: translateY(0);
-    animation-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67);
+    animation-timing-function: cubic-bezier(0.17, 0.1, 0.5, 0.67);
   }
 }
 .fade-in {
