@@ -397,6 +397,9 @@ header input {
 .fade-in--3 {
   animation: fade-in 2s 1000ms both;
 }
+.fade-in--4 {
+  animation: fade-in 2s 1200ms both;
+}
 
 .button__like {
   width: 28px;
