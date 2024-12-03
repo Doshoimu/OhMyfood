@@ -186,7 +186,6 @@ header {
     flex-direction: column;
     text-align: center;
     align-items: center;
-    // padding-bottom: 50px;
     box-shadow: 4px -4px 8px rgba(0, 0, 0, 0.2);
 
     &__link {
@@ -381,7 +380,6 @@ background: #f2f2f2;
 .footer__container {
     background: #353535;
     padding: 22px 25px 22px 25px;
-    // margin-top: 100px;
     display: flex;
     flex-direction: column;
     @include desktop__responsive;
@@ -435,7 +433,6 @@ background: #f2f2f2;
 .footer__nav {
     @include desktop__responsive;
     @include tablet__responsive {
-        // width: 190px;
     }
 }
 
@@ -599,7 +596,6 @@ background: #f2f2f2;
     font-weight: map-get($font-weight, medium );
     @include object-shadow;
     cursor: pointer;
-    // margin: 27px 75px 57px 82px;
     transition: opacity 300ms ease-in-out;
 
     &:hover {
@@ -620,7 +616,6 @@ background: #f2f2f2;
     position: relative;
     background-color: $grey;
     border-radius: 25px 25px 0px 0px;
-    // animation: plate-appear 750ms cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
     padding: 2% 5% 50px 5%;
     margin-top: -30px;
     margin-inline: auto;
@@ -628,7 +623,6 @@ background: #f2f2f2;
 
     @include desktop__responsive {
         max-width: 1024px;
-        // margin: auto;
     }
 
     &__heading {
@@ -653,26 +647,6 @@ background: #f2f2f2;
     display: flex;
     flex-direction: column;
     justify-content: center;
-
-    // &__heading {
-    //     position: relative;
-    //     margin: 4% 0% 2% 0%;
-    //     padding: 10px 0px;
-    //     font-size: 18px;
-    //     font-weight: map-get($font-weight, light);
-    //     text-transform: uppercase;
-    //     // border-bottom: #99E2D0;
-
-    //     &::after {
-    //         display: block;
-    //         position: absolute; 
-    //         bottom: 2px;
-    //         content: "";
-    //         width: 40px;
-    //         height: 4px;
-    //         background-color: $third-color;
-    //     }
-    // }
 
     & h3 {
         border-bottom: 4px $third-color solid;
