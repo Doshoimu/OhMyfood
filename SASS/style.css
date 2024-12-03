@@ -31,11 +31,13 @@
 }
 .cards__content {
   display: flex;
-  gap: 50px;
+  gap: 25px;
   margin: 0 auto;
 }
 .cards__content a {
   padding: 4px;
+  display: flex;
+  gap: 20px;
 }
 
 .fa-store {
@@ -106,7 +108,7 @@ header input {
 .about__link {
   height: 50px;
   width: 228px;
-  margin: 0 0 25px 0;
+  margin: 0 0 50px 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -180,7 +182,7 @@ header input {
   flex-direction: column;
   position: relative;
   height: 251px;
-  margin: 10px;
+  margin: 0px 10px 20px 10px;
   border-radius: 15px;
   background-color: #ffffff;
   box-shadow: 0 4px 10px 0 #D5D5D5;
@@ -501,22 +503,11 @@ header input {
   flex-direction: column;
   justify-content: center;
 }
-.menu__type__heading {
-  position: relative;
-  margin: 4% 0% 2% 0%;
-  padding: 10px 0px;
-  font-size: 18px;
+.menu__type h3 {
+  border-bottom: 4px #99E2D0 solid;
+  width: 50px;
   font-weight: 300;
   text-transform: uppercase;
-}
-.menu__type__heading::after {
-  display: block;
-  position: absolute;
-  bottom: 2px;
-  content: "";
-  width: 40px;
-  height: 4px;
-  background-color: #99E2D0;
 }
 
 .menu-cards {
